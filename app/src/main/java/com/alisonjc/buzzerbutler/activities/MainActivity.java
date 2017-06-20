@@ -74,15 +74,18 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        mSharedPreferences = getApplicationContext().getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE);
         prefManager = PrefManager.getInstance();
 
         toolbarSetup();
         navigationDrawerSetup();
-        mSharedPreferences = getApplicationContext().getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE);
 
         final String userEmail = mSharedPreferences.getString("email", null);
-        if (userEmail != null) {
+        boolean loggedIn = getIntent().getBooleanExtra("logged", false);
+        if (!loggedIn)  {
             userLogin();
+        } else {
+            startFragmentBasedUsingId(R.id.profile_drawer);
         }
 
         showWelcomeToast();
@@ -141,7 +144,6 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         DialogFragment dialogFragment = LoginDialogFragment.newInstance();
         dialogFragment.show(ft, "LoginDialog");
-
     }
 
     @Override
