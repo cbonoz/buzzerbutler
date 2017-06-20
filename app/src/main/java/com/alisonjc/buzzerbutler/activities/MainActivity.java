@@ -112,8 +112,8 @@ public class MainActivity extends AppCompatActivity
 
         name = (TextView) header.findViewById(R.id.nav_header_top);
         email = (TextView) header.findViewById(R.id.nav_header_bottom);
-        String emailString = prefManager.getString("email", "");
 
+        final String emailString = mSharedPreferences.getString("email", "");
         name.setText(getString(R.string.app_name));
         email.setText(emailString);
     }

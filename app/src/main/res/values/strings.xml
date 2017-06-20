@@ -34,5 +34,6 @@
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
     <string name="your_user_profile">Main Profile</string>
+    <string name="create_new_authorized_user">Create New Authorized User\nfor Building</string>
 
 </resources>

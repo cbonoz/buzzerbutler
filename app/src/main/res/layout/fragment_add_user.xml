@@ -6,6 +6,15 @@
     android:orientation="vertical"
     android:weightSum="130">
 
+    <TextView
+        android:text="@string/create_new_authorized_user"
+        android:id="@+id/addUserText"
+        android:gravity="center"
+        android:layout_weight="10"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <ImageView
         android:id="@+id/profile_image"
         android:layout_width="wrap_content"
@@ -13,7 +22,7 @@
         android:src="@drawable/profile_default_image"
         android:maxHeight="20dp"
         android:maxWidth="20dp"
-        android:layout_weight="30"
+        android:layout_weight="20"
         android:layout_gravity="center"
         android:layout_margin="5dp"/>
 
