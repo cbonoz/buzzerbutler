@@ -1,5 +1,7 @@
 package com.alisonjc.buzzerbutler.services;
 
+import com.google.gson.Gson;
+
 import android.app.IntentService;
 import android.content.Intent;
 import android.util.Log;
@@ -25,6 +27,7 @@ public class WebService extends IntentService {
     private static final String TAG = WebService.class.getSimpleName();
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    private static final Gson gson = new Gson();
 
     // API routes.
     private static final String BASE_URL = "http://34.211.130.118";

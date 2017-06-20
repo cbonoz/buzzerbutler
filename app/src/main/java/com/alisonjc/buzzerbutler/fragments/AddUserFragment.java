@@ -1,6 +1,7 @@
 package com.alisonjc.buzzerbutler.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 
 import com.alisonjc.buzzerbutler.R;
 import com.alisonjc.buzzerbutler.UserItem;
+import com.alisonjc.buzzerbutler.services.WebService;
 
 
 //TODO:Save users to external DB
@@ -36,7 +38,6 @@ public class AddUserFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -61,6 +62,10 @@ public class AddUserFragment extends Fragment {
             mUserItem.setName(mName.getText().toString());
             mUserItem.setPhoneNumber(mPhoneNumber.getText().toString());
             mUserItem.setCode(mPinCode.getText().toString());
+
+//            Intent intent = new Intent(getActivity(), WebService.class);
+//            startActivity(intent);
+
             mListener.onAddUserInteraction(mUserItem);
         });
     }

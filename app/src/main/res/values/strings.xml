@@ -33,6 +33,6 @@
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
-    <string name="your_user_profile">your_user_profile</string>
+    <string name="your_user_profile">Main User Profile</string>
 
 </resources>
