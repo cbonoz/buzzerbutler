@@ -8,6 +8,7 @@
 
         <ImageView
             android:id="@+id/profile_image"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/buzzer_butler_165"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -37,7 +39,7 @@
             android:layout_height="wrap_content"
             android:padding="2dp"
             android:text=" NAME"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/color_default"/>
 
@@ -47,7 +49,7 @@
             android:layout_height="wrap_content"
             android:padding="2dp"
             android:text="PHONE NUMBER"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/color_default"/>
 
@@ -57,7 +59,7 @@
             android:layout_height="wrap_content"
             android:padding="2dp"
             android:text="EMAIL"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/color_default"/>
 
@@ -71,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:padding="2dp"
                 android:text="PROMPT: "
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/color_default"/>
 
@@ -81,11 +83,20 @@
                 android:layout_height="wrap_content"
                 android:padding="2dp"
                 android:text="1"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/color_default"/>
 
         </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:text="Manage Users"
+            android:id="@+id/manageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
 

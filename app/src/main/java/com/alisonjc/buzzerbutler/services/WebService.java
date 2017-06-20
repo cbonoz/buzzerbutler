@@ -49,7 +49,10 @@ public class WebService extends IntentService {
             String result = "";
 
             switch (url) {
-
+                case USER_API:
+                    break;
+                default:
+                    break;
             }
 
             try {

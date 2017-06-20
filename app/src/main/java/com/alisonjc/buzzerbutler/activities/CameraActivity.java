@@ -286,6 +286,8 @@ public class CameraActivity extends Activity {
                 break;
             } // ACTION_TAKE_VIDEO
         } // switch
+
+        startMain();
     }
 
     // Some lifecycle callbacks so that the image can survive orientation change

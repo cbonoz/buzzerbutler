@@ -63,8 +63,8 @@ public class AddUserFragment extends Fragment {
             mUserItem.setPhoneNumber(mPhoneNumber.getText().toString());
             mUserItem.setCode(mPinCode.getText().toString());
 
-//            Intent intent = new Intent(getActivity(), WebService.class);
-//            startActivity(intent);
+            Intent intent = new Intent(getActivity(), WebService.class);
+            startActivity(intent);
 
             mListener.onAddUserInteraction(mUserItem);
         });

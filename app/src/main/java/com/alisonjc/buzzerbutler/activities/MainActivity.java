@@ -46,6 +46,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static android.R.attr.id;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SavedUserFragment.OnSavedUserInteractionListener, AddUserFragment.OnAddUserInteraction, ProfileFragment.OnFragmentInteractionListener, LoginDialogFragment.OnCompleteListener {
 
@@ -176,10 +178,12 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(final MenuItem item) {
-        int id = item.getItemId();
+        final int id = item.getItemId();
+        return startFragmentBasedUsingId(id);
+    }
 
+    public boolean startFragmentBasedUsingId(final int id) {
         switch (id) {
-
             case R.id.profile_drawer:
                 addFragmentOnTop(ProfileFragment.newInstance());
                 mActionBar.setTitle(R.string.profile_drawer);

@@ -8,10 +8,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.alisonjc.buzzerbutler.R;
+import com.alisonjc.buzzerbutler.activities.MainActivity;
 
 
 public class ProfileFragment extends Fragment {
@@ -22,6 +25,8 @@ public class ProfileFragment extends Fragment {
     private TextView email;
     private TextView name;
     private TextView phoneNumber;
+
+    private Button manageButton;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -46,6 +51,14 @@ public class ProfileFragment extends Fragment {
         email = (TextView) v.findViewById(R.id.profile_email);
         name = (TextView) v.findViewById(R.id.profile_name);
         phoneNumber = (TextView) v.findViewById(R.id.profile_phone_number);
+
+        manageButton = (Button) v.findViewById(R.id.manageButton);
+        manageButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity) getActivity()).startFragmentBasedUsingId(R.id.saved_drawer);
+            }
+        });
         
         return v;
     }
@@ -55,9 +68,9 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         if(mSharedPreferences.getAll().get("email") != null) {
-            email.setText(mSharedPreferences.getAll().get("email").toString());
-            name.setText(mSharedPreferences.getAll().get("name").toString());
-            phoneNumber.setText(mSharedPreferences.getAll().get("phone_number").toString());
+            email.setText("Email: " + mSharedPreferences.getAll().get("email").toString());
+            name.setText("Name: " + mSharedPreferences.getAll().get("name").toString());
+            phoneNumber.setText("PhoneNumber: " + mSharedPreferences.getAll().get("phone_number").toString());
         }
     }
 

@@ -71,7 +71,7 @@ public class LoginDialogFragment extends DialogFragment {
 
                 mListener.onComplete();
                 // Start the camera login activity.
-//                Intent intent = new Intent(getActivity(), MainActivity.class);
+//                Intent intent = new Intent(getActivity(), CameraActivity.class);
 //                startActivity(intent);
 
                  onDestroyView();
