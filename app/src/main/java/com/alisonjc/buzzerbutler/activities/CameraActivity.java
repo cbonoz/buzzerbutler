@@ -26,7 +26,6 @@ import android.widget.VideoView;
 
 import com.alisonjc.buzzerbutler.R;
 
-
 public class CameraActivity extends Activity {
 
     private static final int ACTION_TAKE_PHOTO_B = 1;

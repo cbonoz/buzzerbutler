@@ -23,7 +23,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_slogan">Building Access Control Made Easy</string>
+    <string name="app_slogan">Building Control Made Easy</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
 
@@ -33,5 +33,6 @@
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
+    <string name="your_user_profile">your_user_profile</string>
 
 </resources>

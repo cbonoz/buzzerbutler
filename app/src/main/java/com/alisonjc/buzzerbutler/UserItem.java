@@ -9,18 +9,22 @@ public class UserItem {
     @SerializedName("email")
     @Expose
     private String email;
+
     @SerializedName("password")
     @Expose
     private String password;
+
     @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("phone_number")
+
+    @SerializedName("phone")
     @Expose
-    private String phoneNumber;
-    @SerializedName("pin_code")
+    private String phone;
+
+    @SerializedName("code")
     @Expose
-    private String pinCode;
+    private String code;
 
     public String getEmail() {
         return email;
@@ -46,20 +50,20 @@ public class UserItem {
         this.name = name;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phone) {
+        this.phone = phone;
     }
 
-    public String getPinCode() {
-        return pinCode;
+    public String getCode() {
+        return code;
     }
 
-    public void setPinCode(String pinCode) {
-        this.pinCode = pinCode;
+    public void setCode(String code) {
+        this.code = code;
     }
 
 }

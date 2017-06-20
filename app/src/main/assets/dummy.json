@@ -1,58 +1,29 @@
 [
   {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "John Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
+    "_id": "1",
+    "name": "Joachim",
+    "code": "1",
+    "verb": "reach",
+    "phone": "+19188081128"
   },
   {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Jane Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
+    "_id": "2",
+    "name": "Allie",
+    "code": "2",
+    "verb": "reach",
+    "phone": "+12062297134"
   },
   {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Max Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
+    "_id": "3",
+    "name": "Chris",
+    "code": "3",
+    "verb": "reach",
+    "phone": "+15109266842"
   },
   {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Mark Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
-  },
-  {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Eric Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
-  },
-  {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Allie Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
-  },
-  {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Mary Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
-  },
-  {
-    "email": "email.email@gmail.com",
-    "password": "1234567",
-    "name": "Jo Doe",
-    "phone_number": "1234567890",
-    "pin_code": "1234"
+    "_id": "3",
+    "name": "passcode",
+    "code": "3",
+    "verb": "use"
   }
 ]

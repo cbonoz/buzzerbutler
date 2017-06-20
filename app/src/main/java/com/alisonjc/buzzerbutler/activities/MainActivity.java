@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity
     private TextView name;
     private TextView email;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private SharedPreferences mSharedPreferences;
     private ActionBar mActionBar;
     private static final String TAG = "MainActivity";
     private SavedUserFragment mSavedUserFragment;
@@ -73,20 +74,16 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this);
         prefManager = PrefManager.getInstance();
 
-        final String userEmail = prefManager.getString("email", null);
-        Log.d(TAG, "userEmail: " + userEmail);
-        if (userEmail == null) {
+        toolbarSetup();
+        navigationDrawerSetup();
+        mSharedPreferences = getApplicationContext().getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE);
+
+        final String userEmail = mSharedPreferences.getString("email", null);
+        if (userEmail != null) {
             userLogin();
-        } else {
-            // load the saved users list if we already logged in.
-            mSavedUserFragment = SavedUserFragment.newInstance();
-            addFragmentOnTop(mSavedUserFragment);
-            mActionBar.setTitle(R.string.saved_drawer);
         }
 
         showWelcomeToast();
-        toolbarSetup();
-        navigationDrawerSetup();
     }
 
     private void showWelcomeToast() {
@@ -170,10 +167,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void removeSharedPreferences(){
-        prefManager.saveString("email", null);
-        prefManager.saveString("pass", null);
-        prefManager.saveString("name", null);
-        prefManager.saveString("phone_number", null);
+        mSharedPreferences.edit().remove("email").apply();
+        mSharedPreferences.edit().remove("pass").apply();
+        mSharedPreferences.edit().remove("name").apply();
+        mSharedPreferences.edit().remove("phone_number").apply();
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

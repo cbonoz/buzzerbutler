@@ -1,7 +1,6 @@
 package com.alisonjc.buzzerbutler.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,9 +12,6 @@ import android.widget.EditText;
 
 import com.alisonjc.buzzerbutler.R;
 import com.alisonjc.buzzerbutler.UserItem;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 //TODO:Save users to external DB
@@ -64,7 +60,7 @@ public class AddUserFragment extends Fragment {
             mUserItem = new UserItem();
             mUserItem.setName(mName.getText().toString());
             mUserItem.setPhoneNumber(mPhoneNumber.getText().toString());
-            mUserItem.setPinCode(mPinCode.getText().toString());
+            mUserItem.setCode(mPinCode.getText().toString());
             mListener.onAddUserInteraction(mUserItem);
         });
     }

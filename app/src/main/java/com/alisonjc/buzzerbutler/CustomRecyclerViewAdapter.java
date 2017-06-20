@@ -41,8 +41,8 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     public void onBindViewHolder(CustomViewHolder holder, int position) {
 
         holder.headerText.setText(mList.get(position).getName());
-        holder.subText1.setText(mList.get(position).getPhoneNumber());
-        holder.subText2.setText(mList.get(position).getPinCode());
+        holder.subText1.setText(mList.get(position).getPhone());
+        holder.subText2.setText(mList.get(position).getCode());
         holder.deleteButton.setImageResource(R.drawable.delete);
 
     }

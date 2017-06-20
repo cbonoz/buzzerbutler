@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 
+import static android.R.attr.value;
+
 public class PrefManager {
 
     private static final String TAG = PrefManager.class.getSimpleName();
@@ -56,6 +58,16 @@ public class PrefManager {
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt(location, value);
         editor.apply();
+    }
+
+    public void removePref(String location) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.remove(location);
+        editor.apply();
+    }
+
+    public boolean contains(String location) {
+        return settings.getAll().containsKey(location);
     }
 
     // ** Getter methods ** //
